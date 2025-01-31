@@ -1,15 +1,15 @@
 import React from 'react';
 import './App.css';
 import Menu from "./Menu"
-import Categories from "./Categories"
 import items from "./data"
+import Categories from "./Categories"
 
 const allCategories = ['all', ...new Set(items.map((item)=>items.category))]
 console.log(allCategories)
 
 function App() {
 
-  const [menuItems, setMenuItems]=React.useState(items)
+  const [menuItems, setMenuItems]=React.useState(items) 
   const [categories, setcategories]=React.useState(allCategories)
 
   const filterItems=(category)=>{
